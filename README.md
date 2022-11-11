@@ -4,7 +4,7 @@ Thanks a lot for subscribing to our reverse-engineering training aimed at beginn
 
 ### Preparing your virtual machine
 
-The first thing you will need is a virtual machine running Windows – official images can be downloaded freely from [this page](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/).. You can choose whichever hypervisor you prefer (VirtualBox, VMware, etc.) or already have installed, it doesn't matter.
+The first thing you will need is a virtual machine running Windows – official images can be downloaded freely from [this page](https://developer.microsoft.com/en-us/windows/downloads/virtual-machines/). You can choose whichever hypervisor you prefer (VirtualBox, VMware, etc.) or already have installed, it doesn't matter.
 Importing a virtual machine is usually as simple as double-clicking on the .OVF file contained in the downloaded archive.
 
 Virtual machines distributed by Microsoft already contain most of the development tools we need (such as Visual Studio, Git, etc.), but we still need to add the reverse-engineering tools used throughout the course.
