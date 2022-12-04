@@ -8,17 +8,17 @@
 struct c2
 {
     short port;
-    char *c2url;
+    char* c2url;
 };
 
 struct node
 {
-    char **c2;
-    struct node *next;
-    char *desc;
+    char** c2;
+    struct node* next;
+    char* desc;
 };
 
-void connect_c2(struct node *head)
+void connect_c2(struct node* head)
 {
     while (head->next)
     {
@@ -29,27 +29,27 @@ void connect_c2(struct node *head)
     printf("the desc is %s\n", head->desc);
 }
 
-void init_c2(struct c2 *c2, char *url)
+void init_c2(struct c2* c2, char* url)
 {
     c2->port = 443;
     c2->c2url = malloc(url_len);
-    strncpy(c2->c2url, url, url_len);
+    strncpy_s(c2->c2url, url, url_len, url_len);
 }
 
-void init_node(struct node *n, struct c2 *c2, char *desc)
+void init_node(struct node* n, struct c2* c2, char* desc)
 {
     n->c2 = &c2->c2url;
     n->next = NULL;
     n->desc = malloc(desc_len);
-    strncpy(n->desc, desc, desc_len);
+    strncpy_s(n->desc, desc, desc_len, desc_len);
 }
 
-void dealloc_c2(struct c2 *e)
+void dealloc_c2(struct c2* e)
 {
     free(e->c2url);
 }
 
-void dealloc_node(struct node *n)
+void dealloc_node(struct node* n)
 {
     free(n->desc);
 }
